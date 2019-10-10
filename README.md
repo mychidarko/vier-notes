@@ -11,8 +11,8 @@ It's a simple app I created to keep my notes
 Vier Notes uses the [element UI library](https://element.eleme.io/#/en-US) and it's components, additionally, scoped CSS has been added for each component
 
 ### backend
-This app is wired to the [vier-api](https://vier-api.000webhostapp.com)
-It uses axios to send XMLHttpRequests to the Vier API
+This app is wired to the [vier-api](https://vier-api.000webhostapp.com) and uses [axios](https://github.com/axios/axios) to send XMLHttpRequests to the Vier API.
+All available routes for the vier-api are listed in apiRoutes.json.
 
 ### dependencies
 - vue
