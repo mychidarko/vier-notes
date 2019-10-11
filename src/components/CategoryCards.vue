@@ -40,7 +40,7 @@
             },
             fetchMore: function() {
                 axios
-                    .get('http://localhost:8000/categories/all')
+                    .get('https://vier-api.000webhostapp.com/categories/all')
                     .then((res) => {
                         var categories = res.data;
                         this.categories = categories;
@@ -52,7 +52,7 @@
         },
         mounted: function () {
             axios
-                .get('http://localhost:8000/categories/all')
+                .get('https://vier-api.000webhostapp.com/categories/all')
                 .then((res) => {
                     var categories = res.data;
                     this.categories = categories;

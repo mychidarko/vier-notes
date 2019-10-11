@@ -35,7 +35,7 @@
 				});
 				axios({
 					method: 'post',
-					url: 'http://localhost:8000/books/add',
+					url: 'https://vier-api.000webhostapp.com/books/add',
 					headers: {'Content-Type': 'application/json'},
 					data
 				}).then((res) => {

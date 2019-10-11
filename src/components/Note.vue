@@ -21,7 +21,7 @@
 		},
 		mounted: function() {
 			axios
-				.get(`http://localhost:8000/book/${this.$route.params.id}`)
+				.get(`https://vier-api.000webhostapp.com/book/${this.$route.params.id}`)
 				.then((res) => {
 					this.note = res.data[0];
 					var md = marked(res.data[0].note);

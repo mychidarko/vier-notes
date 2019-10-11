@@ -40,7 +40,7 @@
             },
             fetchMore: function() {
                 axios
-                    .get('http://localhost:8000/books/all')
+                    .get('https://vier-api.000webhostapp.com/books/all')
                     .then((res) => {
                         var books = res.data;
                         this.books = books;
@@ -52,7 +52,7 @@
         },
         mounted: function () {
             axios
-                .get('http://localhost:8000/books/all/4')
+                .get('https://vier-api.000webhostapp.com/books/all/4')
                 .then((res) => {
                     var books = res.data;
                     this.books = books;
