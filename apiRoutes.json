@@ -2,7 +2,8 @@
     "books": {
         "All Books": "/books/all",
         "All Books with limit": "/books/all/{limit}",
-        "Single Book": "/book/{id}"
+        "Single Book": "/book/{id}",
+        "Add Book": "books/add [POST]"
     },
     "authors": {
         "All Authors": "/authors/all",

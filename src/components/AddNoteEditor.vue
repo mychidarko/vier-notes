@@ -6,13 +6,12 @@
 			<el-input v-model="author" placeholder="Enter author..."></el-input>
 			<textarea v-model="description" placeholder="Enter description..."></textarea>
 			<textarea v-model="body" placeholder="Type your note..."></textarea>
-			<el-button type="success" icon="el-icon-check" native-type="submit">Add Note</el-button>
+			<el-button type="success" icon="el-icon-check" native-type="submit" :loading="loading">Add Note</el-button>
 		</form>
 	</div>
 </template>
 
 <script>
-	import _ from 'lodash';
 	import axios from 'axios';
 
 	export default {
@@ -21,11 +20,13 @@
 				author: '',
 				title: '',
 				description: '',
-				body: ''
+				body: '',
+				loading: false
 			}
 		},
 		methods: {
 			addNote: function() {
+				this.loading = true;
 				var data = JSON.stringify({
 					author: this.author,
 					title: this.title,
@@ -40,10 +41,13 @@
 				}).then((res) => {
 					console.log(res.data);
 					this.Notify(res.data.message, res.data.type);
-					this.title = '';
-					this.author = ''; 
-					this.body = ''; 
-					this.description = '';
+					if (res.data.clearForm === true) {
+						this.title = '';
+						this.author = ''; 
+						this.body = ''; 
+						this.description = '';
+					}
+					this.loading = false;
 				}).catch((err) => {
 					this.Notify(err, 'error');
 					console.log(err);
@@ -56,7 +60,6 @@
                     message,
                     duration: 5000
 				});
-				window.history.pushState('', '', '#/');
 			}
 		}
 	}
