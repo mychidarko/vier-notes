@@ -1,0 +1,21 @@
+{
+	"short_name": "Vier",
+	"name": "Vier Notes",
+	"icons": [
+		{
+			"src": "/192.png",
+			"type": "static/logo.png",
+			"sizes": "192x192"
+		},
+		{
+			"src": "/512.png",
+			"type": "static/logo.png",
+			"sizes": "512x512"
+		}
+	],
+	"start_url": "/",
+	"background_color": "#FFFFFF",
+	"display": "standalone",
+	"scope": "/",
+	"theme_color": "#1092fc"
+}
