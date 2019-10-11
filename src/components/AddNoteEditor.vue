@@ -34,9 +34,9 @@
 					body: this.body
 				});
 				axios({
-					method: 'post',
+					method: 'POST',
 					url: 'https://vier-api.000webhostapp.com/books/add',
-					headers: {'Content-Type': 'application/json'},
+					headers: { 'Content-Type': 'application/json' },
 					data
 				}).then((res) => {
 					console.log(res.data);
@@ -47,10 +47,11 @@
 						this.body = ''; 
 						this.description = '';
 					}
-					this.loading = false;
 				}).catch((err) => {
 					this.Notify(err, 'error');
 					console.log(err);
+				}).finally(() => {
+					this.loading = false;
 				})
 			},
 			Notify: function(message ,type) {
