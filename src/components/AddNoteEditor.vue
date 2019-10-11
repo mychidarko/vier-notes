@@ -39,7 +39,7 @@
 					headers: { 'Content-Type': 'application/json' },
 					data
 				}).then((res) => {
-					console.log(res.data);
+					// console.log(res.data);
 					this.Notify(res.data.message, res.data.type);
 					if (res.data.clearForm === true) {
 						this.title = '';
@@ -49,7 +49,7 @@
 					}
 				}).catch((err) => {
 					this.Notify(err, 'error');
-					console.log(err);
+					// console.log(err);
 				}).finally(() => {
 					this.loading = false;
 				})

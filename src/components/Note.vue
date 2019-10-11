@@ -3,7 +3,7 @@
 		<el-row v-loading="loading" v-if="loading" class="loadingState height-weird"></el-row>
 		<div class="editor" v-else>
 			<h3>{{ note.title }}</h3>
-			<img src="https://source.unsplash.com/random" class="book-cover">
+			<img src="https://source.unsplash.com/random" class="book-cover" alt="book cover">
 			<div v-html="noteBody"></div>
 			<h3><i class="el-icon-star-on"></i> {{ note.likes }}</h3>
 			<h3><small>by</small> {{ note.author }}</h3>

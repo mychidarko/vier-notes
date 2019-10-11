@@ -1,7 +1,7 @@
 <template>
 	<el-col :xs="24" :sm="12" :md="6" :lg="6" :xl="6" class="responsive-card">
 		<el-card shadow="hover" class="bordered-card">
-			<img src="https://source.unsplash.com/random" class="book-cover">
+			<img src="https://source.unsplash.com/random" class="book-cover" alt="book cover">
 			<div class="book-info">
 				<div style="display: flex;">
 					<h3 class="title">{{ name }}</h3>
