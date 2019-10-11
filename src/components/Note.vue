@@ -24,6 +24,7 @@
 			}
 		},
 		mounted: function() {
+			window.axios = axios;
 			axios
 				.get(`https://vier-api.000webhostapp.com/book/${this.$route.params.id}`)
 				.then((res) => {
