@@ -35,7 +35,7 @@
 				});
 				axios({
 					method: 'POST',
-					url: 'https://vier-api.000webhostapp.com/book/add',
+					url: 'https://vier-api.000webhostapp.com/note/add',
 					headers: { 'Content-Type': 'application/json' },
 					data
 				}).then((res) => {

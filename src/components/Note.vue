@@ -26,7 +26,7 @@
 		mounted: function() {
 			window.axios = axios;
 			axios
-				.get(`https://vier-api.000webhostapp.com/book?id=${this.$route.params.id}`)
+				.get(`https://vier-api.000webhostapp.com/note?id=${this.$route.params.id}`)
 				.then((res) => {
 					if (res.data) {
 						this.note = res.data[0];
