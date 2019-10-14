@@ -20,11 +20,11 @@
 	export default {
         data: function() {
             return {
-                url: `#/categories/${this.name.toLowerCase()}`
+                url: `#/category?id=${this.id}`
             }
         },
 		props: [
-			'name', 'rating', 'description', 'Notify'
+			'name', 'rating', 'description', 'Notify', 'id'
 		]
 	}
 </script>
